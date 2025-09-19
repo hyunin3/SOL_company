@@ -20,7 +20,7 @@ function NavBar() {
         top: 0,
         left: 0,
         width: "100%",
-        backgroundColor: "#1565c0",
+        backgroundColor: "#0076be",
         boxShadow: 2,
       }}
     >
@@ -37,7 +37,7 @@ function NavBar() {
 
         {/* 메뉴 버튼 영역 */}
         <Box sx={{ flexGrow: 1 }}>
-          {["스마트금융", "세무", "상생금융", "금융상품", "고객센터", "은행소개"].map(
+          {["스마트금융", "세무", "상생금융", "금융상품", "연금", "고객센터", "은행소개"].map(
             (menu) => (
               <Button
                 key={menu}

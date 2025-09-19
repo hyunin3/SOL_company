@@ -1,0 +1,70 @@
+/* 외부 컨테이너: 페이지 중앙 정렬과 상단 여백 담당 */
+.carousel-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* 내부 래퍼를 가운데로 */
+  margin-top: 90px; /* NavBar 높이를 감안해 조절 */
+  padding: 0 12px;
+}
+
+/* 실제 캐러셀이 들어가는 박스: 여기서 크기를 제한 */
+.carousel-inner {
+  width: 100%;
+  max-width: 900px;   /* -> 필요하면 800, 1000 등으로 조절하세요 */
+  margin: 0 auto;
+  position: relative;
+}
+
+/* 슬라이드 내부를 flex로 해 중앙 정렬 */
+.slick-slide,
+.slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 이미지 크기 제어: 가로는 래퍼에 맞추고 세로 최대 높이 지정 */
+.carousel-img {
+  width: 100%;
+  max-height: 420px;       /* 이미지 세로 크기 제한 (조절 가능) */
+  object-fit: contain;     /* 이미지 비율 유지하며 잘림 방지 */
+  border-radius: 12px;
+  display: block;
+}
+
+/* 화살표 및 점 스타일 */
+.slick-prev:before,
+.slick-next:before {
+  color: #ffffff;  /* 화살표 색 (원하면 파란색 등으로 변경) */
+  font-size: 26px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* 화살표 위치(더 바깥으로 보이게 조절하고 싶으면 값 변경) */
+.slick-prev {
+  left: -50px;
+}
+.slick-next {
+  right: -50px;
+}
+
+/* 점 네비게이션 색상 */
+.slick-dots li button:before {
+  color: #e0e0e0;
+  opacity: 1;
+}
+.slick-dots li.slick-active button:before {
+  color: #1565c0;
+}
+
+/* 반응형: 작은 화면에서 이미지 높이 줄이기 */
+@media (max-width: 800px) {
+  .carousel-inner {
+    max-width: 95%;
+  }
+  .carousel-img {
+    max-height: 260px;
+  }
+  .slick-prev { left: -30px; }
+  .slick-next { right: -30px; }
+}

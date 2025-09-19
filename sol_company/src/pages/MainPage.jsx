@@ -1,21 +1,41 @@
-import NavBar from "../components/NavBar";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+import React from "react";
+import Slider from "react-slick";
+import "../css/MainPage.css";
 
-function MainPage() {
+// slick 기본 CSS (필수)
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import Design1 from "../assets/Design1.png";
+import Design2 from "../assets/Design2.png";
+
+const MainPage = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3500,
+    arrows: true,
+  };
+
   return (
-    <>
-      <NavBar />
-      <Box sx={{ mt: 10, textAlign: "center" }}>
-        <Typography variant="h4" fontWeight="bold">
-          은행 메인 페이지
-        </Typography>
-        <Typography variant="body1" sx={{ mt: 2 }}>
-          여기서 주요 서비스(계좌조회, 송금 등)를 소개할 수 있어요.
-        </Typography>
-      </Box>
-    </>
+    <div className="carousel-container">
+      {/* 가운데 정렬과 max-width를 담당하는 내부 래퍼 */}
+      <div className="carousel-inner">
+        <Slider {...settings}>
+          <div className="slide">
+            <img src={Design1} alt="배너1" className="carousel-img" />
+          </div>
+          <div className="slide">
+            <img src={Design2} alt="배너2" className="carousel-img" />
+          </div>
+        </Slider>
+      </div>
+    </div>
   );
-}
+};
 
 export default MainPage;
