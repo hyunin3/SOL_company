@@ -1,10 +1,12 @@
+import NavBar from "./components/NavBar";
 import MainPage from "./pages/MainPage";
 
 function App() {
   return (
-    <div>
+    <>
+      <NavBar />
       <MainPage />
-    </div>
+    </>
   );
 }
 
