@@ -1,38 +1,40 @@
 import React from "react";
-import Slider from "react-slick";
 import "../css/MainPage.css";
-
-// slick 기본 CSS (필수)
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-import Design1 from "../assets/Design1.png";
-import Design2 from "../assets/Design2.png";
+import mainImage from "../assets/main.png";
 
 const MainPage = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3500,
-    arrows: true,
-  };
-
   return (
-    <div className="carousel-container">
-      {/* 가운데 정렬과 max-width를 담당하는 내부 래퍼 */}
-      <div className="carousel-inner">
-        <Slider {...settings}>
-          <div className="slide">
-            <img src={Design1} alt="배너1" className="carousel-img" />
+    <div>
+      {/* 메인 배너 */}
+      <div className="main-container">
+        <img src={mainImage} alt="메인 배너" className="main-img" />
+      </div>
+
+      {/* 추가 콘텐츠 영역 */}
+      <div className="content-section">
+        <h2 className="section-title">SOL의 새로운 기술로 일상을 더욱 편리하게</h2>
+        <div className="icon-grid">
+          <div className="icon-card">
+            <span className="icon">💳</span>
+            <p>카드</p>
           </div>
-          <div className="slide">
-            <img src={Design2} alt="배너2" className="carousel-img" />
+          <div className="icon-card">
+            <span className="icon">🏦</span>
+            <p>예금</p>
           </div>
-        </Slider>
+          <div className="icon-card">
+            <span className="icon">💰</span>
+            <p>대출</p>
+          </div>
+          <div className="icon-card">
+            <span className="icon">🌐</span>
+            <p>외환</p>
+          </div>
+          <div className="icon-card">
+            <span className="icon">👥</span>
+            <p>고객센터</p>
+          </div>
+        </div>
       </div>
     </div>
   );

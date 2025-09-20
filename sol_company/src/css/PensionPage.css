@@ -1,0 +1,17 @@
+.pension-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.pension-container h1 {
+  color: #4a3f35;
+  margin-bottom: 20px;
+}
+
+.pension-container p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.6;
+}
