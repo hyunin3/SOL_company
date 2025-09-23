@@ -1,11 +1,24 @@
+import React from "react";
 import "../css/PensionPage.css";
+import Desigin3 from "../assets/Design3.png";
 
 function PensionPage() {
   return (
     <div className="pension-container">
-      <h1>SOL COMPANY는 AI로 기존에 없던 연금을 만들어나갑니다</h1>
-      <p>고객의 미래를 위한 새로운 금융을 만들어가겠습니다</p>
-      <p>오직 당신만을 위한 연금을 설계하고 운용합니다</p>
+      {/* 왼쪽: 설명 + 버튼 */}
+      <div className="pension-info">
+        <h2 className="pension-title">연금 서비스 안내</h2>
+        <p className="pension-desc">
+          SOL은 단순한 연금을 넘어 고객의 미래를 설계합니다.  
+          지금 바로 확인해 보세요.
+        </p>
+        <button className="pension-btn">상품 자세히 보기</button>
+      </div>
+
+      {/* 오른쪽: 이미지 */}
+      <div className="pension-image-wrap">
+        <img src={Desigin3} alt="연금 디자인" className="pension-image" />
+      </div>
     </div>
   );
 }

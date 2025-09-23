@@ -1,17 +1,56 @@
 .pension-container {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  min-height: 80vh;
+  background-color: #f9f9f9;
 }
 
-.pension-container h1 {
-  color: #4a3f35;
-  margin-bottom: 20px;
+/* 왼쪽 정보 영역 */
+.pension-info {
+  max-width: 45%;
 }
 
-.pension-container p {
-  color: #555;
-  font-size: 18px;
+.pension-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #1a237e; /* 은행 사이트 느낌의 진한 파랑 */
+}
+
+.pension-desc {
+  font-size: 1.1rem;
   line-height: 1.6;
+  margin-bottom: 24px;
+  color: #555;
+}
+
+.pension-btn {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pension-btn:hover {
+  background-color: #1558b0;
+}
+
+/* 오른쪽 이미지 */
+.pension-image-wrap {
+  max-width: 60%;
+  text-align: center;
+  margin-left: 40px;
+}
+
+.pension-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
